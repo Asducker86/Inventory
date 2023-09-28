@@ -1,5 +1,11 @@
 // Define the API endpoint (URL)
-const apiUrl = 'https://script.google.com/macros/s/AKfycbxNS3BnLG40A4L2Fi5Zd8Jt759ht5JQXBL9C0Y7hdQ/dev';
+const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1LhsBoKPW9jYj3K5aghHSodcBRksrVI8adjAObPPode0/values/DBS%20Vehicle%20Database%20-%20Ancaster?key=YOUR_API_KEY';
+
+// Define Google API key and OAuth client ID
+const googleConfig = {
+  'apiKey': 'AIzaSyCCvGMyNwWVk6-G6HB9esAFqm775hV07qc', // Your Google API key
+  'clientId': '668016298289-o64rt3fb9vuptue6mvp47v67no840ptg.apps.googleusercontent.com', // Your Google OAuth client ID
+};
 
 // Function to fetch data from the API
 async function fetchData() {
@@ -23,11 +29,12 @@ function displayData(data) {
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = '<h2>Vehicle Inventory</h2>';
 
-  if (data.length === 0) {
+  if (data.values.length === 0) {
     resultsDiv.innerHTML += '<p>No results found.</p>';
   } else {
-    data.forEach((item, index) => {
-      resultsDiv.innerHTML += `<p>${index + 1}. ${item.make} ${item.model} (${item.year})</p>`;
+    data.values.forEach((row, index) => {
+      // Adjust this based on your sheet's structure
+      resultsDiv.innerHTML += `<p>${index + 1}. ${row[0]} ${row[1]} (${row[2]})</p>`;
     });
   }
 }
