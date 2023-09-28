@@ -3,12 +3,11 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('my-pwa-cache-v1').then(function(cache) {
       return cache.addAll([
-        // List the URLs of your application's core assets to cache
-        '/',
-        '/index.html', // Update with your HTML file(s)
-        '/styles.css', // Update with your CSS file(s)
-        '/app.js', // Update with your JavaScript file(s)
-        '/images/logo.png', // Update with your image files
+        '/', // Cache the root URL
+        '/index.html', // Cache your HTML file(s)
+        '/styles.css', // Cache your CSS file(s)
+        '/app.js', // Cache your JavaScript file(s)
+        '/images/logo.png', // Cache your image files
         // Add more URLs as needed
       ]);
     })
