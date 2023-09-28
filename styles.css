@@ -1,0 +1,27 @@
+/* This is a CSS comment */
+
+/* Define styles for the body element */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Define styles for headings (h1, h2, etc.) */
+h1 {
+  font-size: 28px;
+  color: #007bff;
+}
+
+/* Define styles for buttons */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Define additional styles as needed */
