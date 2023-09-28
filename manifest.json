@@ -2,7 +2,7 @@
     "name": "My GAS PWA",
     "short_name": "GAS PWA",
     "description": "A Progressive Web App built with Google Apps Script",
-    "start_url": "https://script.google.com/macros/s/AKfycbxNS3BnLG40A4L2Fi5Zd8Jt759ht5JQXBL9C0Y7hdQ/dev",
+    "start_url": "https://script.google.com/macros/s/AKfycbxNS3BnLG40A4L2Fi5Zd8Jt759ht5JQXBL9C0Y7hdQ/dev?utm_source=pwa",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4285F4",
@@ -12,5 +12,6 @@
             "sizes": "any",
             "type": "image/svg+xml"
         }
+        // Consider adding PNG icons of various sizes here for broader compatibility.
     ]
 }
